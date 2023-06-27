@@ -1,4 +1,4 @@
-
+import getIngredientsData from "./getData.mjs";
 class Resultados {
     constructor(data) {
         this.kcal = data.totalNutrients.ENERC_KCAL;
@@ -31,3 +31,8 @@ class Resultados {
 }
 
 export default Resultados
+
+// let ingredientes = ["100g chicken", " 200g beef"]
+// let datos = await getIngredientsData(ingredientes);
+// let resultado = new Resultados(datos);
+// console.log(resultado)
