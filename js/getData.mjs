@@ -1,20 +1,24 @@
-import {url} from "./apiEdamam.mjs"
+import { url } from "./apiEdamam.mjs";
 
-
-
-    async function getIngredientsData(ingredientes) {
-    let response = await fetch(url+encodeURIComponent(ingredientes.join(", ")));
-    let data = await response.json();
-    return data
+async function getIngredientsData(Array) {
+    let data = {"ingr": Array};
+    let response = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+    }).catch((error) => {
+        console.error("Error:", error);
+    });
+    let datos = await response.json();
+    return datos;
 }
 
+export default getIngredientsData;
 
 
-export default getIngredientsData
-
-
-
-
-
-
-
+// let ingredientes = ["100g chicken", " 200g beef"]
+// let datos = await getIngredientsData(ingredientes);
+// console.log(datos)
