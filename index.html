@@ -9,45 +9,23 @@
 <body>
     <header></header>
     <main>
-        <form action="POST">
-        <select name="ingredientes" id="ingredientes">
-            <optgroup label="Desayuno">
-                <option value="milk">Leche</option>
-                <option value="cheese">Queso</option>
-                <option value="bread">Pan</option>
-                <option value="egg">Huevo</option>
-                <option value="tomato">Tomate</option>
-                <option value="coffee">Café</option>
-                <option value="croissant">Cruasán</option>
-                <option value="honey">Miel</option>
-                <option value="mermelade">Mermelada</option>
-            </optgroup>
-            <optgroup label="Comida">
-                <option value="potato">Patata</option>
-                <option value="carrot">Zanahoria</option>
-                <option value="pizza">Pizza</option>
-                <option value="pasta">Pasta</option>
-                <option value="burger">Hamburguesa</option>
-                <option value="chicken">Pollo</option>
-                <option value="fish">Pescado</option>
-                <option value="soup">Sopa</option>
-                <option value="rice">Arroz</option>
-                <option value="sushi">Sushi</option>
-                <option value="salad">Ensalada</option>
-                <option value="ramen">Ramen</option>
-            </optgroup> 
-        </select>
-        <select name="cantidad" id="cantidad">
+        <form action="GET">
+        <input name="ingredientes" id="ingredientes" placeholder="Ingrediente">
+        <input type="number" name="calorias" id="cantidad" min="0" max="1000" value="0">
+        <select name="cantidad" id="unidad">
+                <option value="units">Unidad(es)</option>
                 <option value="l">Litros</option>
                 <option value="ml">Mililitros</option>
-                <option value="g">Gramos</option>
                 <option value="mg">Miligramos</option>
+                <option value="g">Gramos</option>
+                <option value="kg">Kilogramos</option>
         </select>
-        <input type="number" name="calorias" id="calorias" min="0" max="1000" value="0">
         <input type="submit" value="Añadir">
         </form> 
         <section id="list">
+            <ul>
 
+            </ul>
         </section>
         <section id="results">
 
