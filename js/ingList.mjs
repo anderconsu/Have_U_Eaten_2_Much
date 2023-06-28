@@ -1,9 +1,15 @@
+import traducir from "./traducir.mjs";
+
 class ingList {
     constructor() {
         this.lista = [];
+        this.array = [];
     }
-    addIng(ing) {
+    async addIng(ing) {
         this.lista.push(ing);
+        let ingrediente = await traducir(ing.ingrediente);
+        this.array.push(`${ing.cantidad}${ing.unidad} ${ingrediente}`);
+        console.log(this.array);
     }
     render() {
         let lista = document.querySelector("#list ul");
@@ -16,6 +22,12 @@ class ingList {
             button.addEventListener("click", () => {
                 console.log("Eliminar seleccionado");
                 this.lista.splice(this.lista.indexOf(ing), 1);
+                this.array.splice(
+                    this.array.indexOf(
+                        `${ing.cantidad}${ing.unidad} ${ing.ingrediente}`
+                    ),
+                    1
+                );
                 li.remove();
             });
             li.appendChild(button);

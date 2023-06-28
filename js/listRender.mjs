@@ -1,5 +1,6 @@
 import Ingredient from "./Ingredient.mjs";
 import ingList from "./ingList.mjs";
+import getIngredientsData from "./getData.mjs";
 
 class functionalList {
     constructor() {
@@ -21,6 +22,15 @@ class functionalList {
             this.ingList.addIng(ing);
             this.ingList.render();
 
+        })
+        let botonResultado = document.querySelector("#resultadoBoton");
+        botonResultado.addEventListener("click", async() =>{
+            // botonResultado.remove()
+            console.log(this.ingList.array)
+            console.log("Cargando resultados")
+            let result = await getIngredientsData(this.ingList.array);
+            console.log(result);
+            
         })
     }    
 }

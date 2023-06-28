@@ -9,7 +9,7 @@
 <body>
     <header></header>
     <main>
-        <form action="GET">
+        <form action="POST">
         <input name="ingredientes" id="ingredientes" placeholder="Ingrediente">
         <input type="number" name="calorias" id="cantidad" min="1" max="1000" value="1" placeholder="Cantidad">
         <select name="cantidad" id="unidad">
@@ -24,11 +24,10 @@
         </form> 
         <section id="list">
             <ul>
-
             </ul>
         </section>
         <section id="results">
-
+            <button id="resultadoBoton">Ver resultados</button>
         </section>
     </main>
     <script type="module" src="main.js"></script>
