@@ -1,4 +1,3 @@
-
 class ingList {
     constructor() {
         this.lista = [];
@@ -15,16 +14,14 @@ class ingList {
             let button = document.createElement("button");
             button.textContent = "Eliminar";
             button.addEventListener("click", () => {
-                console.log("Eliminar seleccionado")
+                console.log("Eliminar seleccionado");
                 this.lista.splice(this.lista.indexOf(ing), 1);
                 li.remove();
-
-            })
+            });
             li.appendChild(button);
             lista.appendChild(li);
-
         });
     }
 }
 
-export default ingList
+export default ingList;

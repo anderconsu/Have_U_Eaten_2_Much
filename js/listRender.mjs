@@ -10,6 +10,10 @@ class functionalList {
         form.addEventListener("submit", (ev) => {
             ev.preventDefault();
             const ingredientInput = document.querySelector('#ingredientes').value;
+            if (!ingredientInput) {
+                alert("Ingrediente vacío");
+                return;
+            }
             const cantidadSelect = document.querySelector('#cantidad').value;
             const unidadInput = document.querySelector('#unidad').value;
             let ing = new Ingredient(ingredientInput, cantidadSelect, unidadInput);
