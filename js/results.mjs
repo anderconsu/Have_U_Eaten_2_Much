@@ -39,6 +39,9 @@ class Resultados {
                 let label = await traducir(value.label, "en", "es");
                 if (value.unit === "%") {
                     li.textContent = `Lo que equivale al ${Math.round(value.quantity*100)/100}${value.unit} diario.`;
+                    if (value.quantity>100) {
+                        li.textContent += `Te has pasado un ${(Math.round((value.quantity-100)*100)/100)}${value.unit}`;
+                    }
                 }else{
                     li.textContent = `Has consumido ${Math.round(value.quantity*100)/100}${value.unit} de ${label}`;
                 }
