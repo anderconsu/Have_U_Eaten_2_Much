@@ -41,9 +41,14 @@ class Resultados {
                     li.textContent = `Lo que equivale al ${Math.round(value.quantity*100)/100}${value.unit} diario.`;
                     if (value.quantity>100) {
                         li.textContent += `Te has pasado un ${(Math.round((value.quantity-100)*100)/100)}${value.unit}`;
+                        li.classList.add("danger");
+                    }else{
+                        li.classList.add("save");
                     }
+                    li.classList.add("percentage");
                 }else{
                     li.textContent = `Has consumido ${Math.round(value.quantity*100)/100}${value.unit} de ${label}`;
+                    li.classList.add("consumed");
                 }
                 li.id = value.label;
                 ul.appendChild(li);
