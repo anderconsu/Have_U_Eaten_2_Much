@@ -28,10 +28,14 @@ class functionalList {
             // botonResultado.remove()
             console.log(this.ingList.array)
             console.log("Cargando resultados")
+            botonResultado.remove()
+            document.querySelector("#loading").hidden=false
             let result = await getIngredientsData(this.ingList.array);
+            document.querySelector("#loading").hidden=true
             console.log(result);
-            
+
         })
+        
     }    
 }
 export default functionalList
