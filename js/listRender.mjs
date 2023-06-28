@@ -1,7 +1,7 @@
 import Ingredient from "./Ingredient.mjs";
 import ingList from "./ingList.mjs";
 import getIngredientsData from "./getData.mjs";
-
+import Resultados from "./results.mjs";
 class functionalList {
     constructor() {
         this.ingList = new ingList();
@@ -31,8 +31,8 @@ class functionalList {
             botonResultado.remove()
             document.querySelector("#loading").hidden=false
             let result = await getIngredientsData(this.ingList.array);
-            document.querySelector("#loading").hidden=true
-            console.log(result);
+            let res = new Resultados(result);
+            res.render(res);
 
         })
         

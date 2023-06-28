@@ -1,4 +1,4 @@
-import getIngredientsData from "./getData.mjs";
+import traducir from "./traducir.mjs";
 class Resultados {
     constructor(data) {
         this.kcal = data.totalNutrients.ENERC_KCAL;
@@ -28,6 +28,27 @@ class Resultados {
         this.vitc = data.totalNutrients.VITC;
         this.dailyvitc = data.totalDaily.VITC;
     }
+    async render(obj) {
+        let result = document.querySelector("#results");
+        result.innerHTML = ""
+        let ul = document.createElement("ul");
+        for (let [key, value] of Object.entries(obj)) {
+            if(value) {
+                if(value.quantity > 0){
+                let li = document.createElement("li");
+                let label = await traducir(value.label, "en", "es");
+                if (value.unit === "%") {
+                    li.textContent = `Lo que equivale al ${Math.round(value.quantity*100)/100}${value.unit} diario.`;
+                }else{
+                    li.textContent = `Has consumido ${Math.round(value.quantity*100)/100}${value.unit} de ${label}`;
+                }
+                li.id = value.label;
+                ul.appendChild(li);
+                }
+            }
+        result.appendChild(ul);
+    }
+}
 }
 
 export default Resultados

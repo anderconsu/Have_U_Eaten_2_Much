@@ -1,10 +1,10 @@
-async function traducir(str) {
+async function traducir(str, from = "es", to="en") {
     const res = await fetch("http://0.0.0.0:5000/translate", {
         method: "POST",
         body: JSON.stringify({
             q: str,
-            source: "es",
-            target: "en",
+            source: from,
+            target: to,
             format: "text",
             api_key: "",
         }),
@@ -20,5 +20,5 @@ async function traducir(str) {
 export default traducir;
 
 // // testeo
-let result = await traducir("leche");
-console.log(result);
+// let result = await traducir("leche");
+// console.log(result);
