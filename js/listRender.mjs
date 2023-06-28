@@ -26,12 +26,15 @@ class functionalList {
         let botonResultado = document.querySelector("#resultadoBoton");
         botonResultado.addEventListener("click", async() =>{
             // botonResultado.remove()
+            let resultado = document.querySelector("#results");
+            resultado.innerHTML = ""
             console.log(this.ingList.array)
             console.log("Cargando resultados")
-            botonResultado.remove()
+            botonResultado.hidden=true
             document.querySelector("#loading").hidden=false
             let result = await getIngredientsData(this.ingList.array);
             let res = new Resultados(result);
+            document.querySelector("#loading").hidden=true
             res.render(res);
 
         })

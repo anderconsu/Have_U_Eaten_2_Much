@@ -55,6 +55,9 @@ class Resultados {
                 }
             }
         result.appendChild(ul);
+        let botonres = document.querySelector("#resultadoBoton");
+        botonres.textContent = "Volver a calcular";
+        botonres.hidden = false;
     }
 }
 }
