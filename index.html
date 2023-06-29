@@ -7,7 +7,12 @@
     <title>Eating</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <div id="logoheader">
+            <img src="./images/Green Line Branch Organic Nature Logo.gif" alt="Logo" id="logo">
+        </div>
+        <h1>HAVE YOU EATEN 2 MUCH?</h1>
+    </header>
     <main>
         <form action="POST">
         <input name="ingredientes" id="ingredientes" placeholder="Ingrediente">
@@ -27,11 +32,13 @@
             <ul>
             </ul>
         </section>
-        <section id="results">
-        </section>
-        <section>
-            <img src="./images/loading.gif" alt="Loading..." id="loading" hidden="true">
-            <button id="resultadoBoton">Ver resultados</button>
+        <section id="resultadocss">
+            <section id="results">
+            </section>
+            <section id="carga">
+                <img src="./images/loading.gif" alt="Loading..." id="loading" hidden="true">
+                <button id="resultadoBoton">Ver resultados</button>
+            </section>
         </section>
     </main>
     <script type="module" src="main.js"></script>

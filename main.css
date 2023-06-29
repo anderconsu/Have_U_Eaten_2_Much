@@ -3,7 +3,101 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* crear variable color principal #c8dfbf */
+:root {
+    --colorPrincipal: #c8dfbf;
+    --colorSecundario: #0f2b05;
+}
+body {
+    background-color: var(--colorPrincipal);
+}
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    border: var(--colorSecundario) 8px solid;
+}
+header h1 {
+    background-color: var(--colorPrincipal);
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+header #logoheader {
+    height: 7rem;
+}
+header img {
+    height: 100%;
+}
 
-/* #loading {
-    display: none;
-} */
+form {
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+    justify-content: center;
+    background-color: var(--colorSecundario);
+}
+#list{
+    border: 4px solid var(--colorSecundario);
+}
+#list ul{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+}
+#list li{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration-line: underline;
+}
+#list button{
+    color: white;
+    padding: 0.2rem;
+    margin: auto;
+    background-color: var(--colorSecundario);
+}
+#cantidad {
+    width: 3rem;
+}
+
+#results{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#carga button {
+    color: white;
+    padding: 0.2rem;
+    margin: auto;
+    margin-bottom: 2rem;
+    background-color: var(--colorSecundario);
+}
+.danger {
+    color: red;
+}
+.percentage {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+#carga {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#loading{
+    margin: 2rem auto;
+}
