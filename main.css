@@ -30,9 +30,23 @@ header h1 {
 }
 header #logoheader {
     height: 7rem;
+    transition: 0.5s;
+}
+header #logoheader:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s;
+    border-radius: 6px;
 }
 header img {
     height: 100%;
+}
+#descripcion {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    margin: auto;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 form {
@@ -99,6 +113,12 @@ form {
     margin: auto;
     margin-bottom: 2rem;
     background-color: var(--colorSecundario);
+    transition: 0.2s;
+}
+#carga button:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition: 0.2s;
 }
 .danger {
     color: red;

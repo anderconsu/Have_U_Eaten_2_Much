@@ -45,6 +45,10 @@ class functionalList {
             let res = new Resultados(result);
             res.render(res);
         })
+        let logo = document.querySelector("#logo");
+        logo.addEventListener("click", () => {
+            window.open("https://fullstack.cloudconsu.com/RampUP/web_personal/pages/never.html")
+        })
         
     }    
 }
