@@ -12,6 +12,9 @@ async function getIngredientsData(Array) {
     }).catch((error) => {
         console.error("Error:", error);
     });
+    if (response.status != 200) {
+        return "error"
+    }
     let datos = await response.json();
     return datos;
 }

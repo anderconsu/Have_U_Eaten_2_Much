@@ -33,10 +33,17 @@ class functionalList {
             botonResultado.hidden=true
             document.querySelector("#loading").hidden=false
             let result = await getIngredientsData(this.ingList.array);
-            let res = new Resultados(result);
             document.querySelector("#loading").hidden=true
+            if (result == "error") {
+                alert("No se han podido cotejar los datos");
+                let result = document.querySelector("#results");
+                result.innerHTML = ""
+                let botonres = document.querySelector("#resultadoBoton");
+                botonres.textContent = "Volver a calcular";
+                botonres.hidden = false;
+                return;}
+            let res = new Resultados(result);
             res.render(res);
-
         })
         
     }    
