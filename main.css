@@ -44,6 +44,7 @@ header img {
 #descripcion {
     width: 100%;
     padding: 1rem;
+    font-size: 1.5rem;
     text-align: center;
     margin: auto;
     font-family: 'Ysabeau Infant', sans-serif;
@@ -106,11 +107,15 @@ form {
 .consumed {
     list-style: square;
 }
+#carga img {
+    height: 18rem;
+}
 #carga button {
     color: white;
-    padding: 0.2rem;
+    font-size: 1.5rem ;
+    padding: 0.5rem;
     margin: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     background-color: var(--colorSecundario);
     transition: 0.2s;
 }
@@ -135,4 +140,11 @@ form {
 }
 #loading{
     margin: 2rem auto;
+}
+
+@media screen and (min-width: 1000px) {
+    main {
+        margin: auto;
+        width: 70%;
+    }
 }
