@@ -38,7 +38,7 @@ class Resultados {
                 let li = document.createElement("li");
                 let label = await traducir(value.label, "en", "es");
                 if (value.unit === "%") {
-                    li.textContent = `Lo que equivale al ${Math.round(value.quantity*100)/100}${value.unit} diario.`;
+                    li.textContent = `Lo que equivale al ${Math.round(value.quantity*100)/100}${value.unit} del limite diario.`;
                     if (value.quantity>100) {
                         li.textContent += `Te has pasado un ${(Math.round((value.quantity-100)*100)/100)}${value.unit}`;
                         li.classList.add("danger");
