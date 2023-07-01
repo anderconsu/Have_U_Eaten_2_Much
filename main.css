@@ -61,7 +61,13 @@ form {
     padding: 1rem;
     justify-content: center;
     background-color: var(--colorSecundario);
+    border-radius: 1rem;
     
+}
+form select, form input {
+    border-radius: 1rem;
+    background-color: var(--colorPrincipal);
+    padding: 0.4rem;
 }
 #list{
     border: 4px solid var(--colorSecundario);
@@ -105,7 +111,7 @@ form {
 #resultadocss{
     margin-top: 1rem;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 #resultadocss h2 {
     font-family: 'Ysabeau Infant', sans-serif;
@@ -124,7 +130,7 @@ form {
     margin-top: 2rem;
 }
 #carga img {
-    height: 18rem;
+    height: 18vh;
 }
 #carga button {
     color:var(--colorPrincipal);
@@ -132,6 +138,7 @@ form {
     padding: 0.5rem;
     margin: auto;
     margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
     background-color: var(--colorSecundario);
     transition: 0.2s;
     border-radius: 10px;
@@ -147,14 +154,13 @@ form {
     list-style: none;
 }
 #carga {
-    margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
 #loading{
-    margin: 2rem auto;
+    margin:  auto;
 }
 
 @media screen and (min-width: 1000px) {
@@ -165,6 +171,10 @@ form {
     #resultadocss{
         border: 4px solid var(--colorSecundario);
         border-style: double;
+    }
+    #carga img {
+        margin-top: 1rem;
+        height: 18vh;
     }
 
 }
