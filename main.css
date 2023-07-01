@@ -19,6 +19,7 @@ header {
     display: flex;
     flex-wrap: nowrap;
     border: var(--colorSecundario) 8px solid;
+    
 }
 header h1 {
     background-color: var(--colorPrincipal);
@@ -27,6 +28,7 @@ header h1 {
     text-align: center;
     margin: auto;
     font-family: 'Quicksand', sans-serif;
+    color: var(--colorSecundario);
 }
 header #logoheader {
     height: 7rem;
@@ -48,6 +50,7 @@ header img {
     text-align: center;
     margin: auto;
     font-family: 'Ysabeau Infant', sans-serif;
+    color: var(--colorSecundario);
 }
 
 form {
@@ -58,9 +61,11 @@ form {
     padding: 1rem;
     justify-content: center;
     background-color: var(--colorSecundario);
+    
 }
 #list{
     border: 4px solid var(--colorSecundario);
+    border-style: double;
 }
 #list h2{
     margin: auto;
@@ -97,8 +102,18 @@ form {
     width: 3rem;
 }
 
+#resultadocss{
+    margin-top: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+#resultadocss h2 {
+    font-family: 'Ysabeau Infant', sans-serif;
+    color: var(--colorSecundario);
+}
 #results{
     margin-top: 1rem;
+    padding: 1rem;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -106,30 +121,30 @@ form {
 }
 .consumed {
     list-style: square;
+    margin-top: 2rem;
 }
 #carga img {
     height: 18rem;
 }
 #carga button {
-    color: white;
-    font-size: 1.5rem ;
+    color:var(--colorPrincipal);
+    font-size: 1.4rem ;
     padding: 0.5rem;
     margin: auto;
     margin-bottom: 1.5rem;
     background-color: var(--colorSecundario);
     transition: 0.2s;
+    border-radius: 10px;
 }
 #carga button:hover {
     cursor: pointer;
     scale: 1.1;
-    transition: 0.2s;
 }
 .danger {
     color: red;
 }
 .percentage {
     list-style: none;
-    margin-bottom: 1rem;
 }
 #carga {
     margin-top: 2rem;
@@ -147,4 +162,9 @@ form {
         margin: auto;
         width: 70%;
     }
+    #resultadocss{
+        border: 4px solid var(--colorSecundario);
+        border-style: double;
+    }
+
 }

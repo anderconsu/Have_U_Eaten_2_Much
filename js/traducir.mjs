@@ -1,5 +1,5 @@
 async function traducir(str, from = "es", to="en") {
-    const res = await fetch("http://0.0.0.0:5000/translate", {
+    const res = await fetch("https://traductor.cloudconsu.com/translate", {
         method: "POST",
         body: JSON.stringify({
             q: str,
