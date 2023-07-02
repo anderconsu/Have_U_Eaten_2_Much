@@ -99,8 +99,9 @@ form select, form input {
     text-decoration-line: underline;
 }
 #list button{
-    color: white;
-    padding: 0.2rem;
+    color: var(--colorPrincipal);
+    padding: 0.3rem;
+    border-radius: 0.5rem;
     margin: auto;
     background-color: var(--colorSecundario);
 }
